@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#087a62" name="theme-color"/>
+  <meta content="the Meal Next — prototype tủ lạnh thông minh, thực đơn cá nhân hóa, mua sắm và chuyên gia Nhóm 8." name="description"/>
+  <title>
+   the Meal Next · Nhóm 8
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app">
+   <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview">
+     <span class="brand-mark">
+      ✳
+     </span>
+     <span>
+      <strong>
+       the Meal
+       <span class="brand-dot">
+        .
+       </span>
+      </strong>
+      <small>
+       HEALTHY LIVING PLATFORM
+      </small>
+     </span>
+    </a>
+    <div class="sidebar-label">
+     KHÔNG GIAN CỦA BẠN
+    </div>
+    <nav class="nav" id="nav">
+     <button class="active" data-page="overview">
+      <span>
+       ▦
+      </span>
+      Tổng quan
+     </button>
+     <button data-page="fridge">
+      <span>
+       ▤
+      </span>
+      Tủ lạnh thông minh
+      <em id="fridgeCount">
+      </em>
+     </button>
+     <button data-page="recipes">
+      <span>
+       ♧
+      </span>
+      Gợi ý thực đơn
+     </button>
+     <button data-page="shopping">
+      <span>
+       ▧
+      </span>
+      Danh sách mua sắm
+     </button>
+     <div class="nav-divider">
+     </div>
+     <button data-page="experts">
+      <span>
+       ◈
+      </span>
+      Chuyên gia &amp; khóa học
+     </button>
+     <button data-page="community">
+      <span>
+       ♡
+      </span>
+      Cộng đồng
+     </button>
+     <button data-page="settings">
+      <span>
+       ⚙
+      </span>
+      Cài đặt cá nhân
+     </button>
+    </nav>
+    <div class="sidebar-bottom">
+     <div class="upgrade">
+      <span>
+       ✦ THE MEAL PREMIUM
+      </span>
+      <h3>
+       Mở khóa trải nghiệm không giới hạn
+      </h3>
+      <p>
+       Quản lý nhiều hơn 7 thực phẩm cùng các tiện ích nâng cao.
+      </p>
+      <button class="light-btn" id="upgradeBtn">
+       Dùng thử Premium →
+      </button>
+     </div>
+     <p class="fine">
+      Nhóm 8 · Bài tập lớn số 4 · 2026
+     </p>
+    </div>
+   </aside>
+   <div class="main-wrap">
+    <header class="topbar">
+     <button aria-label="Mở menu" class="icon-btn menu-btn" id="menuBtn">
+      ☰
+     </button>
+     <div class="breadcrumbs">
+      <span>
+       Không gian sức khỏe
+      </span>
+      <span class="slash">
+       /
+      </span>
+      <strong id="crumb">
+       Tổng quan
+      </strong>
+     </div>
+     <div class="top-actions">
+      <span class="today" id="today">
+      </span>
+      <button class="notification icon-btn" id="notificationsBtn" title="Thông báo">
+       ♧
+       <i id="noticeDot">
+       </i>
+      </button>
+      <button class="avatar" id="avatarBtn" title="Cài đặt">
+       N8
+      </button>
+     </div>
+    </header>
+    <main id="view">
+    </main>
+    <footer>
+     the Meal Next · Website nguyên mẫu phục vụ học tập · Không phải website chính thức của the Meal.
+    </footer>
+   </div>
+  </div>
+  <nav aria-label="Điều hướng nhanh" class="mobile-nav">
+   <button class="active" data-page="overview">
+    <span>
+     ⌂
+    </span>
+    Tổng quan
+   </button>
+   <button data-page="fridge">
+    <span>
+     🧊
+    </span>
+    Tủ lạnh
+   </button>
+   <button data-page="recipes">
+    <span>
+     🍽
+    </span>
+    Thực đơn
+   </button>
+   <button data-page="shopping">
+    <span>
+     🛒
+    </span>
+    Mua sắm
+   </button>
+  </nav>
+  <div class="overlay" id="overlay">
+  </div>
+  <div aria-live="polite" id="toast" role="status">
+  </div>
+  <script defer="" src="app.js">
+  </script>
+ </body>
+</html>
+
