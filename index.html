@@ -1,176 +1,100 @@
 <!DOCTYPE html>
 <html lang="vi">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="#087a62" name="theme-color"/>
-  <meta content="the Meal Next — prototype tủ lạnh thông minh, thực đơn cá nhân hóa, mua sắm và chuyên gia Nhóm 8." name="description"/>
-  <title>
-   the Meal Next · Nhóm 8
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <div class="app">
-   <aside class="sidebar" id="sidebar">
-    <a class="brand" href="#overview">
-     <span class="brand-mark">
-      ✳
-     </span>
-     <span>
-      <strong>
-       the Meal
-       <span class="brand-dot">
-        .
-       </span>
-      </strong>
-      <small>
-       HEALTHY LIVING PLATFORM
-      </small>
-     </span>
-    </a>
-    <div class="sidebar-label">
-     KHÔNG GIAN CỦA BẠN
-    </div>
-    <nav class="nav" id="nav">
-     <button class="active" data-page="overview">
-      <span>
-       ▦
-      </span>
-      Tổng quan
-     </button>
-     <button data-page="fridge">
-      <span>
-       ▤
-      </span>
-      Tủ lạnh thông minh
-      <em id="fridgeCount">
-      </em>
-     </button>
-     <button data-page="recipes">
-      <span>
-       ♧
-      </span>
-      Gợi ý thực đơn
-     </button>
-     <button data-page="shopping">
-      <span>
-       ▧
-      </span>
-      Danh sách mua sắm
-     </button>
-     <div class="nav-divider">
-     </div>
-     <button data-page="experts">
-      <span>
-       ◈
-      </span>
-      Chuyên gia &amp; khóa học
-     </button>
-     <button data-page="community">
-      <span>
-       ♡
-      </span>
-      Cộng đồng
-     </button>
-     <button data-page="settings">
-      <span>
-       ⚙
-      </span>
-      Cài đặt cá nhân
-     </button>
-    </nav>
-    <div class="sidebar-bottom">
-     <div class="upgrade">
-      <span>
-       ✦ THE MEAL PREMIUM
-      </span>
-      <h3>
-       Mở khóa trải nghiệm không giới hạn
-      </h3>
-      <p>
-       Quản lý nhiều hơn 7 thực phẩm cùng các tiện ích nâng cao.
-      </p>
-      <button class="light-btn" id="upgradeBtn">
-       Dùng thử Premium →
-      </button>
-     </div>
-     <p class="fine">
-      Nhóm 8 · Bài tập lớn số 4 · 2026
-     </p>
-    </div>
-   </aside>
-   <div class="main-wrap">
-    <header class="topbar">
-     <button aria-label="Mở menu" class="icon-btn menu-btn" id="menuBtn">
-      ☰
-     </button>
-     <div class="breadcrumbs">
-      <span>
-       Không gian sức khỏe
-      </span>
-      <span class="slash">
-       /
-      </span>
-      <strong id="crumb">
-       Tổng quan
-      </strong>
-     </div>
-     <div class="top-actions">
-      <span class="today" id="today">
-      </span>
-      <button class="notification icon-btn" id="notificationsBtn" title="Thông báo">
-       ♧
-       <i id="noticeDot">
-       </i>
-      </button>
-      <button class="avatar" id="avatarBtn" title="Cài đặt">
-       N8
-      </button>
-     </div>
-    </header>
-    <main id="view">
-    </main>
-    <footer>
-     the Meal Next · Website nguyên mẫu phục vụ học tập · Không phải website chính thức của the Meal.
-    </footer>
-   </div>
-  </div>
-  <nav aria-label="Điều hướng nhanh" class="mobile-nav">
-   <button class="active" data-page="overview">
-    <span>
-     ⌂
-    </span>
-    Tổng quan
-   </button>
-   <button data-page="fridge">
-    <span>
-     🧊
-    </span>
-    Tủ lạnh
-   </button>
-   <button data-page="recipes">
-    <span>
-     🍽
-    </span>
-    Thực đơn
-   </button>
-   <button data-page="shopping">
-    <span>
-     🛒
-    </span>
-    Mua sắm
-   </button>
-  </nav>
-  <div class="overlay" id="overlay">
-  </div>
-  <div aria-live="polite" id="toast" role="status">
-  </div>
-  <script defer="" src="app.js">
-  </script>
- </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#48cc9a" />
+  <meta name="description" content="the Meal — cá nhân hóa thực đơn, quản lý thực phẩm và rèn luyện sức khỏe." />
+  <title>the Meal — Dinh dưỡng cá nhân hóa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="the.meal trang chủ"><span class="brand-word">the<span class="brand-dot">.</span><span class="brand-m">m</span>eal</span><small>Ăn tốt · Sống khỏe</small></a>
+      <div class="side-label">KHÔNG GIAN CỦA BẠN</div>
+      <nav class="nav-list" aria-label="Điều hướng chính">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span>Tổng quan</button>
+        <button class="nav-item" data-view="fridge"><span class="nav-icon">▤</span>Tủ lạnh thông minh <span class="nav-count" id="fridgeCount">6</span></button>
+        <button class="nav-item" data-view="meals"><span class="nav-icon">♧</span>Gợi ý thực đơn</button>
+        <button class="nav-item" data-view="shopping"><span class="nav-icon">☷</span>Danh sách mua sắm <span class="nav-count" id="shoppingCount">4</span></button>
+        <button class="nav-item" data-view="community"><span class="nav-icon">◎</span>Cộng đồng món Việt</button>
+        <button class="nav-item" data-view="experts"><span class="nav-icon">✳</span>Chuyên gia & khóa học</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="premium-card"><div class="premium-icon">✦</div><strong>Mở khóa the Meal+</strong><p>Thực đơn cá nhân hóa và quản lý không giới hạn.</p><button class="btn btn-dark btn-full" data-view="plans">Khám phá gói dịch vụ <span>↗</span></button></div>
+        <button class="profile-mini" id="profileButton"><span class="avatar">T</span><span><strong>Thảo Nguyễn</strong><small>Thành viên miễn phí</small></span><span class="dots">•••</span></button>
+      </div>
+    </aside>
 
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button><div class="breadcrumb">Không gian của bạn <span>/</span> <strong id="breadcrumbTitle">Tổng quan</strong></div><div class="top-actions"><button class="icon-button" id="notificationButton" aria-label="Thông báo">♧<i></i></button><span class="today-label" id="todayLabel">Thứ Hai, 13 tháng 10</span><span class="avatar avatar-small">T</span></div></header>
+
+      <section class="view active" id="view-overview">
+        <div class="welcome-row"><div><p class="eyebrow">THỨC ĂN TỐT, TÂM TRẠNG TỐT</p><h1>Chào Thảo, hôm nay<br><span>mình ăn gì nhỉ?</span> <span class="wave">✳</span></h1><p class="muted intro">Một chút chuẩn bị hôm nay, một thói quen khỏe mạnh ngày mai.</p></div><div class="date-pill">☼ <span id="longDate">Thứ Hai, 13/10/2026</span></div></div>
+        <div class="hero-grid">
+          <article class="hero-card"><div class="hero-copy"><span class="soft-tag">GỢI Ý HÔM NAY</span><h2>Ăn ngon từ những<br>gì bạn đang có.</h2><p>Khám phá món ăn phù hợp với nguyên liệu trong tủ lạnh và mục tiêu của bạn.</p><button class="btn btn-light" data-view="meals">Tạo thực đơn <span>→</span></button></div><div class="hero-food" aria-hidden="true"><div class="food-circle"><span>🥗</span></div><span class="leaf leaf-a">✦</span><span class="leaf leaf-b">✳</span><span class="hero-caption">Tươi ngon mỗi ngày</span></div></article>
+          <article class="streak-card"><div class="streak-top"><span class="streak-symbol">✦</span><span class="soft-tag green-tag">TUẦN NÀY</span></div><h3>Thói quen nhỏ,<br>thay đổi lớn.</h3><p>Bạn đã ghi lại bữa ăn trong <strong>4 ngày</strong> tuần này.</p><div class="week-dots"><span class="done">T</span><span class="done">T</span><span class="done">N</span><span class="done">B</span><span>T</span><span>T</span><span>C</span></div><small class="muted">Tiếp tục giữ nhịp nhé!</small></article>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">TỔNG QUAN NHANH</p><h2>Nhịp sống của bạn</h2></div><button class="text-button" data-view="fridge">Xem tất cả <span>→</span></button></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-top"><span class="stat-icon peach">♨</span><span class="stat-note">Hôm nay</span></div><div class="stat-value">1,240 <small>kcal</small></div><div class="stat-title">Năng lượng đã ghi nhận</div><div class="progress"><span style="width:62%"></span></div><div class="stat-foot"><span>62% mục tiêu</span><span>2,000 kcal</span></div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon lilac">▤</span><span class="status-dot">● Đang theo dõi</span></div><div class="stat-value" id="overviewFridgeCount">6 <small>món</small></div><div class="stat-title">Thực phẩm trong tủ lạnh</div><div class="mini-tags"><span>🥬 2 rau củ</span><span>🍗 2 đạm</span></div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon mint">⌁</span><span class="stat-note">Cần chú ý</span></div><div class="stat-value" id="expiringCount">2 <small>món</small></div><div class="stat-title">Sắp đến hạn sử dụng</div><div class="alert-link" data-view="fridge">Dùng trước khi hết hạn <span>→</span></div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon butter">☷</span><span class="stat-note">Đã lên kế hoạch</span></div><div class="stat-value" id="overviewShoppingCount">4 <small>món</small></div><div class="stat-title">Trong danh sách mua sắm</div><div class="alert-link" data-view="shopping">Kiểm tra danh sách <span>→</span></div></article></div>
+        <div class="bottom-grid"><article class="panel meal-preview"><div class="panel-heading"><div><p class="eyebrow">GỢI Ý TỪ TỦ LẠNH</p><h3>Bữa ăn nên thử</h3></div><button class="round-arrow" data-view="meals">↗</button></div><div class="suggested-meal"><div class="meal-art art-green">🥗</div><div class="meal-info"><span class="meal-category">BỮA TRƯA · 25 PHÚT</span><h4>Ức gà áp chảo rau củ</h4><p>Gà · Cà rốt · Rau xanh</p><div class="meal-meta"><span>◉ 420 kcal</span><span>✦ Dễ làm</span></div></div></div><div class="suggested-meal"><div class="meal-art art-yellow">🍲</div><div class="meal-info"><span class="meal-category">BỮA TỐI · 30 PHÚT</span><h4>Canh rau củ thịt gà</h4><p>Gà · Cà rốt · Hành</p><div class="meal-meta"><span>◉ 310 kcal</span><span>✦ Dễ làm</span></div></div></div></article><article class="panel expiry-panel"><div class="panel-heading"><div><p class="eyebrow">ĐỪNG ĐỂ LÃNG PHÍ</p><h3>Đang cần dùng sớm</h3></div><span class="warning-count">2</span></div><div id="overviewExpiring" class="expiry-list"></div><button class="btn btn-outline btn-full" data-view="fridge">Quản lý tủ lạnh <span>→</span></button></article></div>
+        <div class="bottom-note"><span class="note-icon">✦</span><span><strong>Mẹo từ the Meal</strong><small>Hãy ưu tiên nguyên liệu gần hết hạn khi chọn món ăn hôm nay.</small></span><button data-view="meals" class="text-button">Tìm món ngay →</button></div>
+      </section>
+
+      <section class="view" id="view-fridge">
+        <div class="page-heading"><div><p class="eyebrow">QUẢN LÝ THỰC PHẨM</p><h1>Tủ lạnh <span>thông minh.</span></h1><p class="muted">Biết mình có gì, dùng đúng lúc, giảm lãng phí mỗi ngày.</p></div><button class="btn btn-dark" id="openAddFood">＋ Thêm thực phẩm</button></div>
+        <div class="fridge-summary"><div><span class="summary-icon">▤</span><span><small>Đang lưu trữ</small><strong id="fridgeSummaryCount">6 thực phẩm</strong></span></div><div><span class="summary-icon summary-warning">◷</span><span><small>Sắp hết hạn</small><strong id="fridgeSummaryExpiring">2 cần sử dụng sớm</strong></span></div><div><span class="summary-icon summary-green">✦</span><span><small>Gợi ý</small><strong>Ưu tiên món có rau củ</strong></span></div></div>
+        <div class="toolbar"><div class="searchbox"><span>⌕</span><input id="foodSearch" placeholder="Tìm thực phẩm..." /></div><select id="foodFilter" aria-label="Lọc thực phẩm"><option value="all">Tất cả thực phẩm</option><option value="expiring">Sắp hết hạn</option><option value="protein">Thịt & đạm</option><option value="vegetable">Rau củ</option><option value="other">Khác</option></select><span class="free-limit" id="freeLimit">Gói miễn phí · 6/7 sản phẩm</span></div>
+        <div id="fridgeGrid" class="food-grid"></div>
+        <div class="info-banner"><span>💡</span><div><strong>Mẹo bảo quản</strong><p>Ghi lại hạn sử dụng khi thêm thực phẩm để the Meal nhắc bạn sử dụng đúng lúc.</p></div></div>
+      </section>
+
+      <section class="view" id="view-meals">
+        <div class="page-heading"><div><p class="eyebrow">CÁ NHÂN HÓA DINH DƯỠNG</p><h1>Hôm nay ăn <span>gì ngon?</span></h1><p class="muted">Thực đơn được gợi ý từ nguyên liệu bạn đang có và mục tiêu của bạn.</p></div><div class="goal-select"><label for="goalSelect">Mục tiêu của bạn</label><select id="goalSelect"><option value="balance">Ăn uống cân bằng</option><option value="lose">Kiểm soát cân nặng</option><option value="muscle">Tăng cơ</option></select></div></div>
+        <div class="meal-controls"><div><span class="control-label">Ưu tiên nguyên liệu</span><p>Thực phẩm sắp hết hạn được ưu tiên trong gợi ý.</p></div><button class="btn btn-dark" id="generateMeals">✦ Tạo gợi ý mới</button></div>
+        <div id="mealRecommendations" class="recipe-grid"></div>
+        <div class="info-banner"><span>✦</span><div><strong>Gợi ý tham khảo</strong><p>Lượng calo và thành phần dinh dưỡng là ước tính minh họa, không thay thế tư vấn y tế hoặc chuyên gia dinh dưỡng.</p></div></div>
+      </section>
+
+      <section class="view" id="view-shopping">
+        <div class="page-heading"><div><p class="eyebrow">LÊN KẾ HOẠCH ĐI CHỢ</p><h1>Danh sách <span>mua sắm.</span></h1><p class="muted">Chỉ mua phần còn thiếu, tránh mua trùng những gì đã có.</p></div><button class="btn btn-dark" id="addShoppingItem">＋ Thêm món</button></div>
+        <div class="shopping-layout"><article class="panel shopping-panel"><div class="shopping-title"><div><h3>Đồ cần mua</h3><p class="muted" id="shoppingProgress">0/0 món đã mua</p></div><button class="text-button" id="clearChecked">Xóa món đã mua</button></div><div class="shopping-progress"><span id="shoppingProgressBar"></span></div><div id="shoppingList" class="shopping-list"></div><div class="add-inline"><input id="shoppingInput" placeholder="Thêm nguyên liệu vào danh sách..." /><button id="shoppingInputAdd" aria-label="Thêm">＋</button></div></article><aside class="panel shopping-tip"><span class="tip-illustration">🧺</span><p class="eyebrow">MUA SẮM THÔNG MINH</p><h3>Mua vừa đủ,<br>ăn thật ngon.</h3><p>Danh sách được tính từ nguyên liệu còn thiếu trong thực đơn. Khi mua xong, hãy cập nhật lại tủ lạnh nhé.</p><button class="btn btn-outline btn-full" data-view="fridge">Cập nhật tủ lạnh →</button></aside></div>
+      </section>
+
+      <section class="view" id="view-community">
+        <div class="page-heading"><div><p class="eyebrow">CHIA SẺ ĐIỀU LÀNH</p><h1>Cộng đồng <span>món Việt.</span></h1><p class="muted">Công thức gia đình, nguyên liệu địa phương và những bữa ăn đầy cảm hứng.</p></div><button class="btn btn-dark" id="openRecipeModal">＋ Chia sẻ công thức</button></div>
+        <div class="community-feature"><div><span class="soft-tag">GÓC BẾP CỘNG ĐỒNG</span><h2>Mỗi món ăn là<br>một câu chuyện.</h2><p>Cùng nhau góp thêm công thức, hình ảnh và kinh nghiệm để kho món Việt ngày càng phong phú.</p><button class="btn btn-light" id="communityShare">Đóng góp món ăn <span>→</span></button></div><div class="community-emoji">🍜<span>🥬</span><i>✦</i></div></div>
+        <div class="section-heading"><div><p class="eyebrow">ĐƯỢC YÊU THÍCH</p><h2>Công thức từ cộng đồng</h2></div><span class="muted">Dữ liệu minh họa</span></div><div id="communityGrid" class="community-grid"></div>
+      </section>
+
+      <section class="view" id="view-experts">
+        <div class="page-heading"><div><p class="eyebrow">HỌC CÙNG NGƯỜI CÓ CHUYÊN MÔN</p><h1>Chuyên gia & <span>khóa học.</span></h1><p class="muted">Kết nối chuyên gia, học kiến thức dinh dưỡng và xây dựng thói quen tốt.</p></div><button class="btn btn-dark" id="applyExpert">Đăng ký làm chuyên gia ↗</button></div>
+        <div class="expert-banner"><div><span class="soft-tag">THE MEAL ACADEMY</span><h2>Kiến thức đúng.<br>Thói quen bền.</h2><p>Khám phá khóa học được xây dựng bởi người có chuyên môn. Nội dung cần được nền tảng xét duyệt trước khi công khai.</p></div><div class="expert-graphic">✳<span>📚</span><i>✦</i></div></div>
+        <div class="section-heading"><div><p class="eyebrow">HỌC THEO NHỊP CỦA BẠN</p><h2>Khóa học nổi bật</h2></div><span class="muted">Đăng ký miễn phí tài khoản học viên</span></div><div id="courseGrid" class="course-grid"></div>
+        <div class="expert-bottom"><div><span class="expert-round">✳</span><div><h3>Bạn là chuyên gia dinh dưỡng?</h3><p>Đăng ký tài khoản miễn phí, xác thực chuyên môn và chia sẻ khóa học của bạn.</p></div></div><button class="btn btn-outline" id="applyExpertBottom">Tìm hiểu quy trình →</button></div>
+      </section>
+
+      <section class="view" id="view-plans">
+        <div class="center-heading"><p class="eyebrow">CHỌN CÁCH SỐNG KHỎE PHÙ HỢP</p><h1>Một hành trình, <span>nhiều lựa chọn.</span></h1><p class="muted">Bắt đầu từ những điều cơ bản, nâng cấp khi bạn sẵn sàng.</p></div><div class="plan-grid"><article class="plan-card"><span class="plan-kicker">BẮT ĐẦU</span><h2>Miễn phí</h2><div class="plan-price">0đ <small>/ mãi mãi</small></div><p>Những công cụ cần thiết cho thói quen mỗi ngày.</p><ul><li>✓ Theo dõi dinh dưỡng cơ bản</li><li>✓ Tủ lạnh tối đa 7 sản phẩm</li><li>✓ Danh sách mua sắm</li><li>✓ Khám phá cộng đồng</li></ul><button class="btn btn-outline btn-full" data-plan="free">Đang sử dụng</button></article><article class="plan-card plan-featured"><span class="plan-kicker">TRẢI NGHIỆM ĐẦY ĐỦ</span><span class="plan-ribbon">ĐỀ XUẤT</span><h2>the Meal+</h2><div class="plan-price">149.000đ <small>/ tháng</small></div><p>Thêm sự cá nhân hóa cho hành trình sức khỏe.</p><ul><li>✓ Tủ lạnh không giới hạn</li><li>✓ Gợi ý thực đơn nâng cao</li><li>✓ Ưu tiên nguyên liệu sắp hết hạn</li><li>✓ Phân tích dinh dưỡng chuyên sâu</li><li>✓ Dùng thử 7 ngày (mô phỏng)</li></ul><button class="btn btn-dark btn-full" data-plan="plus">Dùng thử 7 ngày</button></article><article class="plan-card"><span class="plan-kicker">DÀNH CHO GIA ĐÌNH</span><h2>Gia đình</h2><div class="plan-price">299.000đ <small>/ tháng</small></div><p>Quản lý thực phẩm và kế hoạch ăn uống chung.</p><ul><li>✓ Tất cả tính năng the Meal+</li><li>✓ Nhiều hồ sơ thành viên</li><li>✓ Danh sách mua sắm dùng chung</li><li>✓ Hỗ trợ ưu tiên</li></ul><button class="btn btn-outline btn-full" data-plan="family">Chọn gói</button></article></div><p class="disclaimer">Giá và gói dịch vụ trên là nội dung minh họa cho bản mẫu đồ án, chưa phải bảng giá chính thức.</p></section>
+
+      <footer class="footer"><span class="footer-wordmark">the<span>.</span><b>m</b>eal</span><span>Ăn tốt · Sống khỏe.</span><span class="footer-right">Bản mẫu đồ án · Chương 2</span></footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="foodModal"><form id="foodForm" method="dialog"><div class="modal-head"><div><p class="eyebrow">TỦ LẠNH THÔNG MINH</p><h2>Thêm thực phẩm</h2></div><button type="button" class="modal-close" data-close="foodModal">×</button></div><div class="form-grid"><label>Tên thực phẩm<input name="name" required placeholder="Ví dụ: Cà chua" /></label><label>Nhóm thực phẩm<select name="category"><option value="vegetable">Rau củ</option><option value="protein">Thịt & đạm</option><option value="fruit">Trái cây</option><option value="other">Khác</option></select></label><label>Số lượng<input name="quantity" required placeholder="500" type="number" min="0.1" step="0.1" /></label><label>Đơn vị<select name="unit"><option>g</option><option>kg</option><option>quả</option><option>bó</option><option>hộp</option><option>ml</option><option>lít</option></select></label><label class="full-field">Hạn sử dụng<input name="expiry" type="date" required /></label></div><p class="form-hint">Bản mẫu lưu dữ liệu ngay trên trình duyệt của bạn.</p><div class="modal-actions"><button type="button" class="btn btn-outline" data-close="foodModal">Hủy</button><button type="submit" class="btn btn-dark">Lưu thực phẩm</button></div></form></dialog>
+
+  <dialog class="modal" id="recipeModal"><form id="recipeForm" method="dialog"><div class="modal-head"><div><p class="eyebrow">ĐÓNG GÓP CỘNG ĐỒNG</p><h2>Chia sẻ công thức</h2></div><button type="button" class="modal-close" data-close="recipeModal">×</button></div><div class="form-grid"><label class="full-field">Tên món ăn<input name="name" required placeholder="Ví dụ: Canh chua cá lóc" /></label><label>Thời gian nấu<input name="time" required placeholder="30 phút" /></label><label>Năng lượng ước tính<input name="kcal" type="number" min="1" required placeholder="350" /></label><label class="full-field">Nguyên liệu chính<input name="ingredients" required placeholder="Cá, cà chua, dứa, rau thơm..." /></label><label class="full-field">Cách làm<textarea name="steps" rows="3" required placeholder="Mô tả ngắn cách chế biến..."></textarea></label></div><p class="form-hint">Nội dung mới được gắn nhãn “Chờ duyệt” trong bản mẫu.</p><div class="modal-actions"><button type="button" class="btn btn-outline" data-close="recipeModal">Hủy</button><button type="submit" class="btn btn-dark">Gửi công thức</button></div></form></dialog>
+
+  <dialog class="modal" id="expertModal"><form id="expertForm" method="dialog"><div class="modal-head"><div><p class="eyebrow">THE MEAL EXPERT</p><h2>Đăng ký chuyên gia</h2></div><button type="button" class="modal-close" data-close="expertModal">×</button></div><p class="muted modal-intro">Đăng ký tài khoản chuyên gia miễn phí. Hồ sơ cần được xác thực trước khi đăng khóa học.</p><div class="form-grid"><label>Họ và tên<input name="name" required placeholder="Họ tên của bạn" /></label><label>Chuyên môn<select name="field"><option>Dinh dưỡng</option><option>Huấn luyện sức khỏe</option><option>Thể chất & vận động</option><option>Khác</option></select></label><label class="full-field">Email<input name="email" type="email" required placeholder="ban@email.com" /></label><label class="full-field">Chứng chỉ / kinh nghiệm<textarea name="credentials" required rows="3" placeholder="Mô tả chứng chỉ hoặc kinh nghiệm chuyên môn..."></textarea></label></div><div class="form-hint">Quy trình dự kiến: gửi hồ sơ → nền tảng xét duyệt → xác nhận điều khoản/hợp đồng điện tử → đăng khóa học.</div><div class="modal-actions"><button type="button" class="btn btn-outline" data-close="expertModal">Để sau</button><button type="submit" class="btn btn-dark">Gửi hồ sơ</button></div></form></dialog>
+
+  <dialog class="modal" id="courseModal"><div class="modal-head"><div><p class="eyebrow">THÔNG TIN KHÓA HỌC</p><h2 id="courseModalTitle">Đăng ký khóa học</h2></div><button type="button" class="modal-close" data-close="courseModal">×</button></div><div id="courseModalBody" class="course-modal-body"></div><label class="contract-check"><input type="checkbox" id="contractCheck" /> Tôi đã đọc và đồng ý với điều khoản tham gia khóa học, quyền và nghĩa vụ của học viên.</label><div class="modal-actions"><button type="button" class="btn btn-outline" data-close="courseModal">Để sau</button><button type="button" class="btn btn-dark" id="enrollCourse">Xác nhận đăng ký</button></div><p class="form-hint">Đây là mô phỏng giao diện; không phát sinh thanh toán hay chữ ký điện tử có giá trị pháp lý.</p></dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
